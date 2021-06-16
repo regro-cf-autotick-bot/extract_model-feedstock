@@ -1,5 +1,5 @@
 {% set name = "extract_model" %}
-{% set version = "0.2.1" %}
+{% set version = "0.2.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,14 +7,14 @@ package:
 
 source:
   url: https://github.com/axiom-data-science/extract_model/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: 5be9c8d4af8b24821d82a4732eddd22e0fd9584fd3894d524038c77d34015a72
+  sha256: a42d2a2fad9a507fce73f209336428bc589c92adda87cd6cc4dd105093df2048
 
 build:
   noarch: python
   number: 0
   script_env:
     - SETUPTOOLS_SCM_PRETEND_VERSION={{ version }}
-  script: "{{ PYTHON }} -m pip install . -vv"
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
@@ -49,7 +49,7 @@ about:
   home: https://github.com/axiom-data-science/extract_model
   license: MIT
   license_file: LICENSE.txt
-  summary: 'Facilitates read-in and extraction for ocean model output.'
+  summary: Facilitates read-in and extraction for ocean model output.
   doc_url: https://extract-model.readthedocs.io/
   dev_url: https://github.com/axiom-data-science/extract_model
 
