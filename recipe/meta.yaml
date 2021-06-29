@@ -1,5 +1,5 @@
 {% set name = "extract_model" %}
-{% set version = "0.3.1" %}
+{% set version = "0.3.3" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/axiom-data-science/extract_model/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: 50cb6086fcf9b0a646518920f63e35ab4d3a7dc40bc576dcfa9fda270d01166e
+  sha256: cf94c4e34b1ee7bad39e4e7e4cb777bb8c98d1a7c54f74f48cc03c2323635458
 
 build:
   noarch: python
@@ -22,7 +22,7 @@ requirements:
     - pip
     - setuptools-scm
   run:
-    - cf_xarray
+    - cf_xarray >=0.6
     - cmocean
     - dask
     - jupyter
@@ -32,6 +32,7 @@ requirements:
     - numpy
     - python >=3.6
     - pytest
+    - requests
     - xarray
     - xcmocean
     - xesmf
