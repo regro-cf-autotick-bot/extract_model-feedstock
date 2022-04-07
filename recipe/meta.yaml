@@ -1,5 +1,5 @@
 {% set name = "extract_model" %}
-{% set version = "0.4" %}
+{% set version = "0.5.3" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/axiom-data-science/extract_model/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: 934c15c7d63a4e5bae4d4da3224558e2ed726f5cc3d6274cc1e2fd2b48c33e0d
+  sha256: f277d8e28a2d8ed7567c381e0a0791d842d825ab09f302bfa169b4e12cb45ff3
 
 build:
   noarch: python
@@ -22,13 +22,15 @@ requirements:
     - pip
     - setuptools-scm
   run:
-    - cf_xarray >=0.6
+    - cartopy
+    - cf_xarray
     - cmocean
     - dask
     - jupyter
     - jupyterlab
     - matplotlib-base
     - netcdf4
+    - numba
     - numpy
     - python >=3.6
     - pytest
@@ -36,6 +38,8 @@ requirements:
     - xarray
     - xcmocean
     - xesmf
+    # - pip:  # install from github to get recent PRs I contributed
+    #   - git@github.com:xarray-contrib/cf-xarray.git
 
 test:
   imports:
