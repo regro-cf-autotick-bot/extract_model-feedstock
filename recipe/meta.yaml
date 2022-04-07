@@ -38,8 +38,8 @@ requirements:
     - xarray
     - xcmocean
     - xesmf
-    - pip:  # install from github to get recent PRs I contributed
-      - git@github.com:xarray-contrib/cf-xarray.git
+    # - pip:  # install from github to get recent PRs I contributed
+    #   - git@github.com:xarray-contrib/cf-xarray.git
 
 test:
   imports:
