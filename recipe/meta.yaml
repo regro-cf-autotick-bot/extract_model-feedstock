@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/axiom-data-science/extract_model/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: 4b503e88e0985a032631ee9ad6b5da7376c3e87a8e4533e232df339bb418bd25
+  sha256: 52181e3c226c335c8e4c30dc7286fb6b369d2ba1192a7292873d95f4cfd383a4
 
 build:
   noarch: python
