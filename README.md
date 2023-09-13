@@ -1,11 +1,11 @@
-About extract_model
-===================
+About extract_model-feedstock
+=============================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/extract_model-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/axiom-data-science/extract_model
 
 Package license: MIT
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/extract_model-feedstock/blob/main/LICENSE.txt)
 
 Summary: Facilitates read-in and extraction for ocean model output.
 
