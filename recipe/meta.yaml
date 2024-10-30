@@ -1,5 +1,5 @@
 {% set name = "extract_model" %}
-{% set version = "1.4.0" %}
+{% set version = "1.4.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/axiom-data-science/extract_model/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: 5d08d5474f56646351a918f45ee1d6ec320d4c355ca32d4c2a1d15693ace8bd4
+  sha256: 103825313c7f406aa77c229eb17fe1bd877d43bb01216cab018396a946901f78
 
 build:
   noarch: python
