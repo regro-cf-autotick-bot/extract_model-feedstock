@@ -11,21 +11,21 @@ source:
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script_env:
     - SETUPTOOLS_SCM_PRETEND_VERSION={{ version }}
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
-    - python >=3.8
+    - python {{ python_min }}
     - pip
     - setuptools-scm
   run:
     - cf_xarray
     - netcdf4
     - numpy <1.24
-    - python >=3.8
+    - python >={{ python_min }}
     - requests
     - scikit-learn  # for xoak tree
     - xarray
@@ -38,6 +38,7 @@ test:
     - extract_model
   requires:
     - pip
+    - python {{ python_min }}
   commands:
     - pip check
 
